@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="yangqing">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="碎碎念刚开始还觉得以后也许大概找的到单子，还能接活。 现在连日系二次元（此前非常容易被AI扭曲的插画风格）相对比较低端的部分也被征服了，而且midjourney模仿席勒画耶酥生吃异形的那几张的确非常惊人啊。 不过感觉包袱也变小了，多了很多很多工具!! 本文尝试先列一些看到的相对比较新奇的相关网站，然后写一下笔者对生成模型的粗浅的了解和认识，阅读综述的想法（还没看完），以及从插画爱好者的角度写一下如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于AI与平面商业插画的一些见闻和想法">
+<meta property="og:url" content="https://yangqing-20.github.io/2022/10/28/art3-ai-and-illustrations/index.html">
+<meta property="og:site_name" content="yangqing&#39;s space">
+<meta property="og:description" content="碎碎念刚开始还觉得以后也许大概找的到单子，还能接活。 现在连日系二次元（此前非常容易被AI扭曲的插画风格）相对比较低端的部分也被征服了，而且midjourney模仿席勒画耶酥生吃异形的那几张的确非常惊人啊。 不过感觉包袱也变小了，多了很多很多工具!! 本文尝试先列一些看到的相对比较新奇的相关网站，然后写一下笔者对生成模型的粗浅的了解和认识，阅读综述的想法（还没看完），以及从插画爱好者的角度写一下如">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-e0b67ed975fa2407b966d6cbbac81f1d_r.jpg?source=172ae18b">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-533cda126aebcbcbe96e2d96735c8769_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-85a34a01352449d086b873f5bd6f3951_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-fdd70cb55e77a157ba600b4329aa3796_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-54bde20c17ab54468536b17d48595e68_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-ae79217b1d88eb81523f53646eba8f9a_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-fccdcd46d6f26107a78e743685d05cb1_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-d49e146ec5dc6d196a38206fafe10326_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-c530a47046c1fa0db6f62b64b2a2a094_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-64be18b07b5f7d9735b8f04958fea4be_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-47b7b8adb45e096f92273ec2eeed2c24_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-9d2d36cac45862eb66d7bf6a56914f20_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-ac89867f3f626e9a136191b8157239d2_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-d644d5f89cf57a8ba11bb4329bf77e5a_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-6e04647f829b19de794b52e460d028d0_b.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-885679b8fc900ed604694215b98a5b5b_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-732c944bed882ddca57060799f8ca170_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-3152ec50eee08fb868702a7bb3b56e42_b.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-8ee997e4a6f435ec554a0ab37966c77b_b.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-0f731b7d15a852ba4c6f7ece9c029040_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-a9707135bc30c90cd92bae0a32f6bf35_b.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-8725268979f7c31eb56b7210ed50df03_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-e59d8450ac076511ef1aae0f12c2b02e_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-8d965f0e64a24f899ff15071b70831f5_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-5d22d7a03a91d99247caf9a1589ed675_b.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-2b59bd99153e2ede3f41151e2d1745a2_b.jpg">
+<meta property="article:published_time" content="2022-10-28T11:24:33.000Z">
+<meta property="article:modified_time" content="2022-10-31T06:23:33.424Z">
+<meta property="article:author" content="yangqing">
+<meta property="article:tag" content="Art">
+<meta property="article:tag" content="Design">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>关于AI与平面商业插画的一些见闻和想法 - yangqing&#39;s space</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"yangqing-20.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>yangqing&#39;s space</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="关于AI与平面商业插画的一些见闻和想法"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-10-28 19:24" pubdate>
+          Friday, October 28th 2022, 7:24 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          9.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          79 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="leancloud-page-views"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">关于AI与平面商业插画的一些见闻和想法</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>刚开始还觉得以后也许大概找的到单子，还能接活。</p>
+<p>现在连日系二次元（此前非常容易被AI扭曲的插画风格）相对比较低端的部分也被征服了，而且midjourney模仿席勒画耶酥生吃异形的那几张的确非常惊人啊。</p>
+<p>不过感觉包袱也变小了，多了很多很多工具!!</p>
+<p>本文尝试先列一些看到的相对比较新奇的相关网站，然后写一下笔者对生成模型的粗浅的了解和认识，阅读综述的想法（还没看完），以及从插画爱好者的角度写一下如何用现有工具提高画平面单幅商业插画的效率，最后展望一下未来机器学习对其他艺术形式的可能的影响。</p>
+<h1 id="相关网站"><a href="#相关网站" class="headerlink" title="相关网站"></a>相关网站</h1><p><a target="_blank" rel="noopener" href="https://github.com/HelixNGC7293/DeforumStableDiffusionLocal">用本地显卡+Stable Diffusion AI快速生成流畅动画的小工具</a></p>
+<p><a target="_blank" rel="noopener" href="https://publicprompts.art/?continueFlag=25c285ac745889fdc55a2f036ef16a4b">stable diffusion文字生成图片的 prompt（提示引导词）汇总网站</a></p>
+<p>转自微博：</p>
+<p>𝟏. 𝐃𝐢𝐬𝐜𝐨 𝐃𝐢𝐟𝐟𝐮𝐬𝐢𝐨𝐧<br>—— 最早出圈的 AI 绘图工具</p>
+<p>▶ Disco Diffusion 零基础入门学习菜单：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lnu7RBqzI">网页链接</a><br>▶ 艺术家&amp;艺术画风描述词推荐：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LpLyCqScb?pagetype=profilefeed">网页链接</a><br>▶ 个人测试初体验：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LnoqrFfMk">网页链接</a><br>▶ 主题测试1：国风测试 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lnyuoz26g?pagetype=profilefeed">网页链接</a><br>▶ 主题测试2：异形画风 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Log7Kz1qo">网页链接</a><br>▶ 主题测试3：莫比斯风格 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LnY6K5NPk">网页链接</a><br>▶ 主题测试4：静物油画 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LqSQfvbDe">网页链接</a><br>▶ 或者直接在微博搜“disco”</p>
+<p>𝟐. 𝐌𝐢𝐝𝐣𝐨𝐮𝐫𝐧𝐞𝐲<br>—— 产品化的 Disco Diffusion</p>
+<p>▶ 现已公测：discord.gg&#x2F;midjourney<br>▶ 入门教程推荐：<a target="_blank" rel="noopener" href="https://m.weibo.cn/n/%E6%B5%B7%E8%BE%9BHyacinth">@海辛Hyacinth</a> 的这篇 <a target="_blank" rel="noopener" href="https://weibo.com/1309158107/LCmr2oJX9?pagetype=profilefeed">网页链接</a><br>▶ 和DiscoDiffusion对比：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Ltj2n0rV8">网页链接</a><br>▶ 个人测试初体验：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Ltg28qWag">网页链接</a><br>▶ 主题测试1：十九世纪麦当劳 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Ltk0MDAkY">网页链接</a><br>▶ 主题测试2：十八世纪的打工人 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LtCHWfMIW">网页链接</a><br>▶ 主题测试3：克苏鲁 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LxAYoavRy?pagetype=profilefeed">网页链接</a><br>▶ 帮网友测试的关键词： <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LxzQc7Vc6?pagetype=profilefeed">网页链接</a></p>
+<p>𝟑. 𝐃𝐀𝐋𝐋·𝐄<br>—— 乙方设计师的终极形态，傻逼甲方终结者。</p>
+<p>▶ 内测申请链接：labs.openai.com&#x2F;waitlist<br>▶ 入门教程：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LAIwE1I1b?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ DALL·E介绍：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lo7UMzYLB"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 低配尝鲜版 DALLE mini：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lq4r4y0jE"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 个人测试初体验：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lv7yspxnk"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 主题测试1：油画meme <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lv5PCyWMe"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 主题测试2：如何让大象转身 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LvK6tkyi5?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 主题测试3：帮梵高理发 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LwDNC2OYW"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 主题测试4：十七世纪 WiFi 使用状况 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LvxnXo325"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 帮网友测试的关键词： <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LxqKntD0G?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 国外用户使用测评合集：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LrE0n5hzS?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ Ben Barry 创作的画集《机器人之书》： <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LpCR8dCmR"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 官方出的单词表《达利之书》，强烈推荐：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LCqaTcWBY?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a></p>
+<p>𝟒. 𝐓𝐢𝐚𝐦𝐚𝐭<br>—— 国产天团出品，支持中文的强化版 Disco Diffusion</p>
+<p>▶ 官方微博：<a target="_blank" rel="noopener" href="https://m.weibo.cn/n/Tiamat%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%89%BA%E6%9C%AF">@Tiamat人工智能艺术</a><br>▶ 内测申请：<a target="_blank" rel="noopener" href="https://weibo.cn/sinaurl?u=https://tiamat-ai.feishu.cn/share/base/shrcn2uXL8wNiveykIFYqWSzsPf"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a></p>
+<p>𝟓. 𝐈𝐦𝐚𝐠𝐞𝐧<br>—— 谷歌下场，直接叫板 DALLE，号称“前所未有的写实感和深度的语言理解”</p>
+<p>▶ 介绍：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LutzS0SKc?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 论文地址：gweb-research-imagen.appspot.com<br>▶ 试玩地址：问就是等内测</p>
+<p>𝟔. 𝐏𝐚𝐫𝐭𝐢<br>—— 谷歌自家内卷产品，继 Imagen 之后又出了一个更强，像素更高，细节更丰富的王者。</p>
+<p>▶ 介绍：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lz2O77aKI?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 论文地址：parti.research.google<br>▶ 试玩地址：问就是等内测</p>
+<p>𝟕. 𝐌𝐚𝐤𝐞-𝐀-𝐒𝐜𝐞𝐧𝐞<br>—— Facebook （Meta）也下场了，当代神笔马良。</p>
+<p>▶ 介绍：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LCjhcgxrv?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 发布推文：<a target="_blank" rel="noopener" href="https://weibo.cn/sinaurl?u=https://twitter.com/MetaAI/status/1547598454922153985"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 试玩地址：问就是等内测</p>
+<p>𝟖. 𝐍𝐔𝐖𝐀<br>—— 微软也下场了，一个名字说明其能力和野心：女娲</p>
+<p>▶ 介绍：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LDs3ZkWJs?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 论文地址：<a target="_blank" rel="noopener" href="https://weibo.cn/sinaurl?u=https://arxiv.org/abs/2207.09814"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 官网地址：<a target="_blank" rel="noopener" href="https://weibo.cn/sinaurl?u=https://nuwa-infinity.microsoft.com"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 试玩地址：问就是等内测</p>
+<p>𝟗. 𝐒𝐭𝐚𝐛𝐥𝐞 𝐃𝐢𝐟𝐟𝐮𝐬𝐢𝐨𝐧<br>—— 目前市面上的最强，没有之一，而且已经开源</p>
+<p>▶ 开源介绍：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/M1riYvkx2">网页链接</a><br>▶ 主题测试1：静物测试 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LFlRvznC4">网页链接</a><br>▶ 主题测试2：川濑巴水的意大利之旅 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LFv1PcAwo">网页链接</a><br>▶ 主题测试3：印象派的北京团建 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LFCFGcHFY">网页链接</a><br>▶ 主题测试4：赛博穆夏 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/M07afiD9k">网页链接</a><br>▶ 主题测试5：西方老北京 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LFXbhyum3">网页链接</a><br>▶ 主题测试6：David Inshaw 的托斯卡纳之旅 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/M0oxvaBuX?pagetype=profilefeed">网页链接</a></p>
+<p>以下是一些和AI结合的工作流探索</p>
+<p>▶ 用 Disco Diffusion 来批量绘制纹理：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Lr8Cc6xTr"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 用色块控制 Disco Diffusion 的配色和构图：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LrKai0Hil?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 我的 AI+Blender 工作流：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/Ls3YnfnKF"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ 我的 AI+Blender 工作流2：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LuludENdd?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a><br>▶ Nekro 大神的终极工作流：我抄我自己 <a target="_blank" rel="noopener" href="https://weibo.com/1757693565/LsDUUDv6e"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a></p>
+<p>关于AI绘画的版权讨论：<a target="_blank" rel="noopener" href="https://weibo.com/1757693565/M0fCYFexT?pagetype=profilefeed"><img src="https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png" srcset="/img/loading.gif" lazyload alt="img">网页链接</a></p>
+<h1 id="模型相关"><a href="#模型相关" class="headerlink" title="模型相关"></a>模型相关</h1><h2 id="生成模型"><a href="#生成模型" class="headerlink" title="生成模型"></a>生成模型</h2><p>最近做的不需要用到diffusion model，先蹲蹲。关于ode和sde优化的部分没看懂也没推。</p>
+<p>【转载】</p>
+<h3 id="Diffusion-Models-A-Comprehensive-Survey-of-Methods-and-Applications"><a href="#Diffusion-Models-A-Comprehensive-Survey-of-Methods-and-Applications" class="headerlink" title="Diffusion Models: A Comprehensive Survey of Methods and Applications"></a>Diffusion Models: A Comprehensive Survey of Methods and Applications</h3><p><img src="https://pic1.zhimg.com/v2-e0b67ed975fa2407b966d6cbbac81f1d_r.jpg?source=172ae18b" srcset="/img/loading.gif" lazyload alt="谷歌&amp;斯坦福&amp;北大 扩散模型首篇综述-Diffusion Models: A Comprehensive Survey of Methods and Applications"></p>
+<p>本综述（Diffusion Models: A Comprehensive Survey of Methods and Applications）来自加州大学&amp;Google Research的<a href="https://link.zhihu.com/?target=https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=zh-CN">Ming-Hsuan Yang</a>、斯坦福大学的<a href="https://link.zhihu.com/?target=https://yang-song.net/">Yang Song</a>（<a href="https://link.zhihu.com/?target=https://openreview.net/forum?id=PxTIG12RRHS">Score SDE</a>一作）、北京大学<a href="https://link.zhihu.com/?target=https://scholar.google.com/citations?user=IJAU8KoAAAAJ&hl=zh-CN">崔斌</a>实验室以及CMU、UCLA、蒙特利尔Mila研究院等众研究团队，首次对现有的扩散生成模型（diffusion model）进行了全面的总结分析，从diffusion model算法细化分类、和其他五大生成模型的关联以及在七大领域中的应用等方面展开，最后提出了diffusion model的现有limitation和未来的发展方向。文章链接：<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2209.00796">https://arxiv.org/abs/2209.00796</a>本综述diffusion models论文分类汇总github链接：<a href="https://link.zhihu.com/?target=https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy">https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy</a><img src="https://pic2.zhimg.com/v2-533cda126aebcbcbe96e2d96735c8769_b.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="一．-介绍"><a href="#一．-介绍" class="headerlink" title="一． 介绍"></a><strong>一．</strong> <strong>介绍</strong></h4><p>扩散模型（diffusion models）是深度生成模型中新的SOTA。扩散模型在图片生成任务中超越了原SOTA：GAN，并且在诸多应用领域都有出色的表现，如计算机视觉，NLP、波形信号处理、多模态建模、分子图建模、时间序列建模、对抗性净化等。此外，扩散模型与其他研究领域有着密切的联系，如稳健学习、表示学习、强化学习。然而，原始的扩散模型也有缺点，它的采样速度慢，通常需要数千个评估步骤才能抽取一个样本；它的最大似然估计无法和基于似然的模型相比；它泛化到各种数据类型的能力较差。如今很多研究已经从实际应用的角度解决上述限制做出了许多努力，或从理论角度对模型能力进行了分析。然而，现在缺乏对扩散模型从算法到应用的最新进展的系统回顾。为了反映这一快速发展领域的进展，<strong>我们对扩散模型进行了首个全面综述</strong>。我们设想我们的工作将阐明扩散模型的设计考虑和先进方法，展示其在不同领域的应用，并指出未来的研究方向。此综述的概要如下图所示：<img src="https://pic2.zhimg.com/v2-85a34a01352449d086b873f5bd6f3951_b.jpg" srcset="/img/loading.gif" lazyload alt="img"><br>尽管diffusion model在各类任务中都有着优秀的表现，它仍还有自己的缺点，并有诸多研究对diffusion model进行了改善。为了系统地阐明diffusion model的研究进展，我们总结了原始扩散模型的三个主要缺点，采样速度慢，最大化似然差、数据泛化能力弱，并提出将的diffusion models改进研究分为对应的三类：采样速度提升、最大似然增强和数据泛化增强。我们首先说明改善的动机，再根据方法的特性将每个改进方向的研究进一步细化分类，从而清楚的展现方法之间的联系与区别。在此我们仅选取部分重要方法为例， 我们的工作中对每类方法都做了详细的介绍，内容如图所示：<img src="https://pic3.zhimg.com/v2-fdd70cb55e77a157ba600b4329aa3796_b.jpg" srcset="/img/loading.gif" lazyload alt="img">在分析完三类扩散模型后，我们将介绍其他的五种生成模型GAN，VAE，Autoregressive model, Normalizing flow, Energy-based model。考虑到扩散模型的优良性质，研究者们已经根据其特性将diffusion model与其他生成模型结合，所以为了进一步展现diffusion model 的特点和改进工作，我们详细地介绍了diffusion model和其他生成模型的结合的工作并阐明了在原始生成模型上的改进之处。Diffusion model在诸多领域都有着优异的表现，并且考虑到不同领域的应用中diffusion model产生了不同的变形，我们系统地介绍了diffusion model的应用研究，其中包含如下领域：计算机视觉，NLP、波形信号处理、多模态建模、分子图建模、时间序列建模、对抗性净化。对于每个任务，我们定义了该任务并介绍利用扩散模型处理任务的工作，<strong>我们将本项工作的主要贡献总结如下：</strong>l <strong>新的分类方法</strong>：我们对扩散模型和其应用提出了一种新的、系统的分类法。具体的我们将模型分为三类：采样速度提升、最大似然提升、数据泛化提升。进一步地，我们将扩散模型的应用分为七类：计算机视觉，NLP、波形信号处理、多模态建模、分子图建模、时间序列建模、对抗性净化。l <strong>全面的回顾</strong>：我们首次全面地概述了现代扩散模型及其应用。我们展示了每种扩散模型的主要改进，和原始模型进行了必要的比较，并总结了相应的论文。对于扩散模型的每种类型的应用，我们展示了扩散模型要解决的主要问题，并说明它们如何解决这些问题l <strong>未来研究方向</strong>：我们对未来研究提出了开放型问题，并对扩散模型在算法和应用方面的未来发展提供了一些建议。</p>
+<h4 id="二．-扩散模型基础"><a href="#二．-扩散模型基础" class="headerlink" title="二． 扩散模型基础"></a><strong>二．</strong> <strong>扩散模型基础</strong></h4><p>生成式建模的一个核心问题是模型的灵活性和可计算性之间的权衡。扩散模型的基本思想是正向扩散过程来系统地扰动数据中的分布，然后通过学习反向扩散过程恢复数据的分布，这样就了产生一个高度灵活且易于计算的生成模型。<em>A.</em> <em>Denoising Diffusion Probabilistic Models（DDPM）</em>一个DDPM由两个参数化马尔可夫链组成，并使用变分推断以在有限时间后生成与原始数据分布一致的样本。前向链的作用是扰动数据，它根据预先设计的噪声进度向数据逐渐加入高斯噪声，直到数据的分布趋于先验分布，即标准高斯分布。反向链从给定的先验开始并使用参数化的高斯转换核，学习逐步恢复原数据分布。用 x0 ~ q(x0) 表示原始数据及其分布,则前向链的分布是可由下式表达：<img src="https://pic1.zhimg.com/v2-54bde20c17ab54468536b17d48595e68_b.jpg" srcset="/img/loading.gif" lazyload alt="img">这说明前向链是马尔可夫过程， xt 是加入t步噪音后的样本， βt 是事先给定的控制噪声进度的参数。当 ∏t1−βt 趋于1时， xT 可以近似认为服从标准高斯分布。当 βt 很小时，逆向过程的转移核可以近似认为也是高斯的：<img src="https://pic3.zhimg.com/v2-ae79217b1d88eb81523f53646eba8f9a_b.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>【有限，近似高斯，不是直接算然后拆】</p>
+<p>【trick：把1:t的求和近似成一个随机分布】</p>
+<p>16年：zero-shot txt2image: </p>
+<p>gan适合采样不适合似然，表示概率分布是用的采样</p>
+<p>而vae喝diffusion用的隐变量</p>
+<p>stable diffusion：5kw美金。zero-shot笛卡尔积的组合</p>
+<p>2019：songyang：Unet补充层与层之间的细节，ddpm的结果</p>
+<p>SGDM：</p>
+<p>f保证可逆，可微</p>
+<p>拟合logqt相当于拟合噪声？？</p>
+<p>相当于高维的vae，vae缺点在于elbo用的近似和真实值的gap难知道。vae可以理解为一步的diffusion（ddpm之前的），gap比diffusion大。</p>
+<p>hierachical vae。</p>
+<p>vae encoder可以加正则。diffusion model里面Unet有窄的，但是里面语义的信息比较少，很local。</p>
+<p>vae的隐空间适合做强化学习。</p>
+<p>压缩的任务要求快速做似然。</p>
+<p>generative model做异常检测。高维空间中有很多没探索过的。</p>
+<p>offline RL: vae估</p>
+<p>ddim</p>
+<p>我们可以将变分下界作为损失函数进行学习：<img src="https://pic2.zhimg.com/v2-fccdcd46d6f26107a78e743685d05cb1_b.jpg" srcset="/img/loading.gif" lazyload alt="img"><em>B.</em> <em>Score-Based Generative Models（SGM）</em>上述DDPM可以视作SGM的离散形式。SGM构造一个随机微分方程（SDE）来平滑的扰乱数据分布，将原始数据分布转化到已知的先验分布：<img src="https://pic3.zhimg.com/v2-d49e146ec5dc6d196a38206fafe10326_b.jpg" srcset="/img/loading.gif" lazyload alt="img">和一个相应的逆向SDE，来将先验分布变换回原始数据分布：<img src="https://pic1.zhimg.com/v2-c530a47046c1fa0db6f62b64b2a2a094_b.jpg" srcset="/img/loading.gif" lazyload alt="img">因此，要逆转扩散过程并生成数据，我们需要的唯一信息就是在每个时间点的分数函数。利用score-matching的技巧我们可以通过如下损失函数来学习分数函数：<img src="https://pic3.zhimg.com/v2-64be18b07b5f7d9735b8f04958fea4be_b.jpg" srcset="/img/loading.gif" lazyload alt="img">对两种方法的进一步介绍和两者关系的介绍请参见我们的文章。原始扩散模型的三个主要缺点，采样速度慢，最大化似然差、数据泛化能力弱。</p>
+<p>最近许多研究都在解决这些缺点，因此我们将改进的扩散模型分为三类：采样速度提升、最大似然增强和数据泛化增强。在接下来的三、四、五节我们将对这三类模型进行详细的介绍。</p>
+<h4 id="三．-采样加速方法"><a href="#三．-采样加速方法" class="headerlink" title="三． 采样加速方法"></a>三． <strong>采样加速方法</strong></h4><p>在应用时，为了让新样本的质量达到最佳，扩散模型往往需要进行成千上万步计算来获取一个新样本。这限制了diffusion model的实际应用价值，因为在实际应用时，我们往往需要产生大量的新样本，来为下一步处理提供材料。研究者们在提高diffusion model采样速度上进行了大量的研究。我们对这些研究进行了详细的阐述。我们将其细化分类为三种方法：<em>Discretization Optimization，Non-Markovian Process，Partial Sampling</em>。</p>
+<p>A. <em>Discretization Optimization</em>方法优化求解diffusion SDE的方法。因为现实中求解复杂SDE只能使用离散解来逼近真正的解，所以该类方法试图优化SDE的离散化方法，在保证样本质量的同时减少离散步数。SGM 提出了一个通用的方法来求解逆向过程，即对前向和后向过程采取相同的离散方法。如果给定了前向SDE的离散方式：<img src="https://pic1.zhimg.com/v2-47b7b8adb45e096f92273ec2eeed2c24_b.jpg" srcset="/img/loading.gif" lazyload alt="img">那么我们就可以以相同的方式离散化逆向SDE：<img src="https://pic1.zhimg.com/v2-9d2d36cac45862eb66d7bf6a56914f20_b.jpg" srcset="/img/loading.gif" lazyload alt="img">这种方法比朴素DDPM效果略好一点。进一步，SGM向SDE求解器中加入了一个矫正器，从而让每一步生成的样本都有正确的分布。在求解的每一步，求解器给出一个样本后，矫正器都使用马尔可夫链蒙特卡罗方法来矫正刚生成的样本的分布。实验表明向求解器中加入矫正器比直接增加求解器的步数效率更高。</p>
+<p>B. <em>Non-Markovian Process</em>方法突破了原有Markovian Process的限制，其逆过程的每一步可以依赖更多以往的样本来进行预测新样本，所以在步长较大时也能做出较好的预测，从而加速采样过程。其中主要的工作DDIM，不再假设前向过程是马尔可夫过程，而是服从如下分布：<img src="https://pic3.zhimg.com/v2-ac89867f3f626e9a136191b8157239d2_b.jpg" srcset="/img/loading.gif" lazyload alt="img">DDIM的采样过程可以视为离散化的神经常微分方程，其采样过程更高效，并且支持样本的内插。进一步的研究发现DDIM可以视作流形上扩散模型PNDM的特例。</p>
+<p>C. <em>Partial Sampling</em>方法通过在generation process中忽略一部分的时间节点，而只使用剩下的时间节点来生成样本，直接减少了采样时间。例如，Progressive Distillation从训练好的扩散模型中蒸馏出效率更高的扩散模型。对于训练好的一个扩散模型，Progressive Distillation会从新训练一个扩散模型，使新的扩散模型的一步对应于训练好的扩散模型的两步，这样新模型就可以省去老模型一半的采样过程。具体算法如下：<img src="https://pic3.zhimg.com/v2-d644d5f89cf57a8ba11bb4329bf77e5a_b.jpg" srcset="/img/loading.gif" lazyload alt="img">不断循环这个蒸馏过程就能让采样步骤指数级下降。</p>
+<p>learning-free sampling：</p>
+<p>SDE:</p>
+<p>ODE</p>
+<p>矩匹配？</p>
+<p>sde加速比ode加速更有优势？</p>
+<p>一个ode的解是一个函数，随机微分方程的解是一个随机过程，可逆。记住结论就行了。</p>
+<p>证明两个时候噪声确定，那么中间的噪声都不影响效果？simplifying by log-SNR</p>
+<h4 id="四．-最大似然估计加强"><a href="#四．-最大似然估计加强" class="headerlink" title="四． 最大似然估计加强"></a><strong>四．</strong> <strong>最大似然估计加强</strong></h4><p>扩散模型在最大似然估计的表现差于基于似然函数的生成模型，但最大化似然估计在诸多应用场景都有重要意义，比如图片压缩, 半监督学习, 对抗性净化。由于对数似然难以直接计算，研究主要集中在优化和分析变分下界（VLB）。我们对提高扩散模型最大似然估计的模型进行了详细的阐述。我们将其细化分类为三类方法：<em>Objectives Designing，Noise Schedule Optimization，Learnable Reverse Variance</em>。</p>
+<p>A. <em>Objectives Designing</em></p>
+<p>方法利用扩散 SDE推倒出生成数据的对数似然与分数函数匹配的损失函数的关系。这样通过适当设计损失函数，就可以最大化 VLB 和对数似然。 Song et al. 证明了可以设计损失函数的权重函数，使得plug-in reverse SDE 生成样本的似然函数值小于等于损失函数值，即损失函数是似然函数的上界。分数函数拟合的损失函数如下：<img src="https://pic1.zhimg.com/v2-6e04647f829b19de794b52e460d028d0_b.jpg" srcset="/img/loading.gif" lazyload alt="img">我们只需将权重函数 λ(t) 设为扩散系数g（t）即可让损失函数成为似然函数的VLB，即：<img src="https://pic4.zhimg.com/v2-885679b8fc900ed604694215b98a5b5b_b.jpg" srcset="/img/loading.gif" lazyload alt="img">B. <em>Noise Schedule Optimization</em></p>
+<p>通过设计或学习前向过程的噪声进度来增大VLB。VDM证明了当离散步数接近无穷时，损失函数完全由信噪比函数SNR（t）的端点决定：<img src="https://pic1.zhimg.com/v2-732c944bed882ddca57060799f8ca170_b.jpg" srcset="/img/loading.gif" lazyload alt="img">那么在离散步数接近无穷时，可以通过学习信噪比函数SNR（t）的端点最优化VLB，而通过学习信噪比函数中间部分的函数值来实现模型其他方面的改进。</p>
+<p>C. <em>Learnable Reverse Variance</em>方法学习反向过程的方差，从而较少拟合误差，可以有效地最大化VLB。Analytic-DPM证明，在DDPM和DDIM中存在反向过程中的最优期望和方差：<img src="https://pic3.zhimg.com/v2-3152ec50eee08fb868702a7bb3b56e42_b.jpg" srcset="/img/loading.gif" lazyload alt="img">使用上述公式和训练好的分数函数，在给定前向过程的条件下，最优的VLB可以近似达到。</p>
+<h4 id="五．-数据泛化增强"><a href="#五．-数据泛化增强" class="headerlink" title="五． 数据泛化增强"></a><strong>五．</strong> <strong>数据泛化增强</strong></h4><p>扩散模型假设数据存在于欧几里得空间，即具有平面几何形状的流形，并添加高斯噪声将不可避免地将数据转换为连续状态空间，所以扩散模型最初只能处理图片等连续性数据，直接应用离散数据或其他数据类型的效果较差。这限制了扩散模型的应用场景。数个研究工作将扩散模型推广到适用于其他数据类型的模型，我们对这些方法进行了详细地阐释。我们将其细化分类为两类方法：Feature Space Unification，Data-Dependent Transition Kernels。A. Feature Space Unification方法将数据转化到统一形式的latent space，然后再latent space上进行扩散。LSGM提出将数据通过VAE框架先转换到连续的latent space 上后再在其上进行扩散。这个方法的难点在于如何同时训练VAE和扩散模型。LSGM表明由于潜在先验是intractable的，分数匹配损失不再适用。LSGM直接使用VAE中传统的损失函数ELBO作为损失函数，并导出了ELBO和分数匹配的关系：<img src="https://pic4.zhimg.com/v2-8ee997e4a6f435ec554a0ab37966c77b_b.jpg" srcset="/img/loading.gif" lazyload alt="img">该式在忽略常数的意义下成立。通过参数化扩散过程中样本的分数函数，LSGM可以高效的学习和优化ELBO。B. Data-Dependent Transition Kernels方法根据数据类型的特点设计diffusion process 中的transition kernels，使扩散模型可以直接应用于特定的数据类型。D3PM为离散型数据设计了transition kernel，可以设为lazy random-walk，absorbing state等。GEODIFF为3D分子图数据设计了平移-旋转不变的图神经网络，并且证明了具有不变性的初分布和transition kernel可以导出具有不变性的边缘分布。假设T是一个平移-旋转变换，如：<img src="https://pic1.zhimg.com/v2-0f731b7d15a852ba4c6f7ece9c029040_b.jpg" srcset="/img/loading.gif" lazyload alt="img">那么生成的样本分布也有平移-旋转不变性：<img src="https://pic2.zhimg.com/v2-a9707135bc30c90cd92bae0a32f6bf35_b.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="六．-和其他生成模型的联系"><a href="#六．-和其他生成模型的联系" class="headerlink" title="六． 和其他生成模型的联系"></a><strong>六．</strong> <strong>和其他生成模型的联系</strong></h4><p>在下面的每个小节中，我们首先介绍其他五类重要的生成模型，并分析它们的优势和局限性。然后我们介绍了扩散模型是如何与它们联系起来的，并说明通过结合扩散模型来改进这些生成模型。VAE，GAN，Autoregressive model, Normalizing flow, Energy-based model和扩散模型的联系如下图所示：<img src="https://pic4.zhimg.com/v2-8725268979f7c31eb56b7210ed50df03_b.jpg" srcset="/img/loading.gif" lazyload alt="img"><br>A. DDPM可以视作层次马尔可夫VAE（hierarchical Markovian VAE）。但DDPM和一般的VAE也有区别。DDPM作为VAE，它的encoder和decoder都服从高斯分布、有马尔科夫行；其隐变量的维数和数据维数相同；decoder的所有层都共用一个神经网络。B. DDPM可以帮助GAN解决训练不稳定的问题。因为数据是在高维空间中的低维流形中，所以GAN生成数据的分布和真实数据的分布重合度低，导致训练不稳定。扩散模型提供了一个系统地增加噪音的过程，通过扩散模型向生成的数据和真实数据添加噪音，然后将加入噪音的数据送入判别器，这样可以高效地解决GAN无法训练、训练不稳定的问题。C. Normalizing flow通过双射函数将数据转换到先验分布，这样的作法限制了Normalizing flow的表达能力，导致应用效果较差。类比扩散模型向encoder中加入噪声，可以增加Normalizing flow的表达能力，而从另一个视角看，这样的做法是将扩散模型推广到前向过程也可学习的模型。D. Autoregressive model在需要保证数据有一定的结构，这导致设计和参数化自回归模型非常困难。扩散模型的训练启发了自回归模型的训练，通过特定的训练方式避免了设计的困难。E. Energy-based model直接对原始数据的分布建模，但直接建模导致学习和采样都比较困难。通过使用扩散恢复似然，模型可以先对样本加入微小的噪声，再从有略微噪声的样本分布来推断原始样本的分布，使的学习和采样过程更简单和稳定。<strong>七．</strong> <strong>扩散模型的应用</strong>在下面的每个小节中，我们分别介绍了扩散模型在计算机视觉、自然语言处理、波形信号处理、多模态学习、分子图生成、时间序列以及对抗学习等七大应用方向中的应用，并对每类应用中的方法进行了细分并解析。例如在计算机视觉中可以用diffusion model进行图像补全修复（RePaint）：<img src="https://pic3.zhimg.com/v2-e59d8450ac076511ef1aae0f12c2b02e_b.jpg" srcset="/img/loading.gif" lazyload alt="img">在多模态任务中可以用diffusion model进行文本到图像的生成（GLIDE）：<img src="https://pic2.zhimg.com/v2-8d965f0e64a24f899ff15071b70831f5_b.jpg" srcset="/img/loading.gif" lazyload alt="img">还可以在分子图生成中用diffusion model进行药物分子和蛋白质分子的生成（GeoDiff）：<img src="https://pic2.zhimg.com/v2-5d22d7a03a91d99247caf9a1589ed675_b.jpg" srcset="/img/loading.gif" lazyload alt="img">应用分类汇总见表：<img src="https://pic3.zhimg.com/v2-2b59bd99153e2ede3f41151e2d1745a2_b.jpg" srcset="/img/loading.gif" lazyload alt="img"><strong>八．</strong> <strong>未来研究方向</strong>A. 应用假设再检验。我们需要检查我们在应用中普遍接受的假设。例如，实践中普遍认为扩散模型的前向过程会将数据转换为标准高斯分布，但事实并非如此，更多的前向扩散步骤会使最终的样本分布与标准高斯分布更接近，与采样过程一致；但更多的前向扩散步骤也会使估计分数函数更加困难。理论的条件很难获得，因此在实践中操作中会导致理论和实践的不匹配。我们应该意识到这种情况并设计适当的扩散模型。B. 从离散时间到连续时间。由于扩散模型的灵活性，许多经验方法可以通过进一步分析得到加强。通过将离散时间的模型转化到对应的连续时间模型，然后再设计更多、更好的离散方法，这样的研究思路有前景。C. 新的生成过程。扩散模型通过两种主要方法生成样本：一是离散化反向扩散 SDE，然后通过离散的反向 SDE 生成样本；另一个是使用逆过程中马尔可夫性质对样本逐步去噪。然而，对于一些任务，在实践中很难应用这些方法来生成样本。因此，需要进一步研究新的生成过程和视角。D. 泛化到更复杂的场景和更多的研究领域。虽然目前diffusion model已经应用到多个场景中，但是大多数局限于单输入单输出的场景，将来可以考虑将其应用到更复杂的场景，比如text-to-audiovisual speech synthesis。也可以考虑和更多的研究领域相结合。</p>
+<h2 id="预训练大模型"><a href="#预训练大模型" class="headerlink" title="预训练大模型"></a>预训练大模型</h2><p>不了解，明年填坑</p>
+<h1 id="怎么用现有工具提高画单幅插画的效率"><a href="#怎么用现有工具提高画单幅插画的效率" class="headerlink" title="怎么用现有工具提高画单幅插画的效率"></a>怎么用现有工具提高画单幅插画的效率</h1><p>十二月份来填坑。</p>
+<h1 id="未来机器学习对其他艺术形式的可能影响"><a href="#未来机器学习对其他艺术形式的可能影响" class="headerlink" title="未来机器学习对其他艺术形式的可能影响"></a>未来机器学习对其他艺术形式的可能影响</h1><p>十二月份来填坑。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Art/" class="category-chain-item">Art</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Art/">#Art</a>
+      
+        <a href="/tags/Design/">#Design</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>关于AI与平面商业插画的一些见闻和想法</div>
+      <div>https://yangqing-20.github.io/2022/10/28/art3-ai-and-illustrations/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>yangqing</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>October 28, 2022</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/11/04/diary-2022-1011/" title="diary-2022-1011">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">diary-2022-1011</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/02/myself1/" title="myself">
+                        <span class="hidden-mobile">myself</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    
+      <script type="text/javascript">
+        var disqus_config = function() {
+          this.page.url = 'https://yangqing-20.github.io/2022/10/28/art3-ai-and-illustrations/';
+          this.page.identifier = '/2022/10/28/art3-ai-and-illustrations/';
+        };
+        Fluid.utils.loadComments('#disqus_thread', function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//' + 'fluid' + '.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', new Date());
+          (d.head || d.body).appendChild(s);
+        });
+      </script>
+    
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="/js/leancloud.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
